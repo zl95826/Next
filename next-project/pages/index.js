@@ -1,4 +1,7 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import Link from 'next/link';
+import Router from 'next/router';
+
 
 export default function Home() {
   return (
@@ -16,6 +19,8 @@ export default function Home() {
         <p className="description">
           Get started by editing <code>pages/index.js</code>
         </p>
+        <p>Go to <Link href="/auth"><a>Auth</a></Link></p>
+        <button onClick={()=>Router.push('/auth')}>Go to Auth</button>
 
         <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
